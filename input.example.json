@@ -1,0 +1,21 @@
+{
+  "profilesText": "smallrig.us\nfactoryxii",
+  "cookieAccounts": [
+    {
+      "label": "account-1",
+      "cookies": [
+        {
+          "name": "sessionid",
+          "value": "YOUR_SESSION_ID",
+          "domain": ".instagram.com",
+          "path": "/",
+          "httpOnly": true,
+          "secure": true
+        }
+      ]
+    }
+  ],
+  "maxFollowingPerProfile": 20,
+  "scrollDelayMs": 500,
+  "accountCooldownMs": 60000
+}

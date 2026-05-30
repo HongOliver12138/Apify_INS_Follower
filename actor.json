@@ -1,0 +1,7 @@
+{
+  "actorSpecification": 1,
+  "name": "instagram-following-exporter",
+  "title": "Instagram Following Exporter",
+  "description": "Exports Instagram following lists using browser cookies and Playwright.",
+  "version": "0.1"
+}

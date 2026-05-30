@@ -1,0 +1,8 @@
+node_modules/
+apify_storage/
+storage/
+output/
+actor-source.zip
+test-input.json
+.DS_Store
+*.log
