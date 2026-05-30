@@ -126,7 +126,10 @@ async function run() {
     }));
     console.log('REQUEST_COUNT', requests.length);
 
-    await crawler.run(requests);
+    await crawler.addRequests(requests);
+    console.log('REQUESTS_ADDED', requests.length);
+
+    await crawler.run();
   } finally {
     await Actor.exit();
   }
