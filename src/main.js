@@ -69,7 +69,10 @@ async function run() {
   await Actor.init();
   try {
     const rawInput = await Actor.getInput() || loadLocalFallbackInput();
+    console.log('RAW_INPUT_KEYS', Object.keys(rawInput || {}));
     const input = loadInput(rawInput);
+    console.log('PARSED_PROFILES', input.profiles);
+    console.log('COOKIE_ACCOUNT_LABELS', input.cookieAccounts.map((account) => account.label));
     const accountPool = createAccountPool(input.cookieAccounts);
     const stateStore = await Actor.openKeyValueStore('account-state');
 
@@ -121,6 +124,7 @@ async function run() {
         account: accountPool.next(),
       },
     }));
+    console.log('REQUEST_COUNT', requests.length);
 
     await crawler.run(requests);
   } finally {
